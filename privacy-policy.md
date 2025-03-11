@@ -1,4 +1,4 @@
-**Privacy Policy for Lindsey: Skincare Advisor**
+### *Lindsey: Skincare Advisor* Privacy Policy
 
 **Effective Date:** March 10, 2025
 
