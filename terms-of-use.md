@@ -108,6 +108,18 @@ For any questions or concerns regarding these Terms or the App, please contact:
 **Alex Molina**  
 developeralexmolina@gmail.com  
 
+**Acknowledgments**
+
+We would like to give special recognition to the following sources that have contributed to the development of our application:
+
+- **Skin Type Detection Model:** The model used for skin type detection in our app is sourced from [Hugging Face](https://huggingface.co/dima806/skin_types_image_detection?sagemaker_deploy=true). We appreciate the efforts of the creators in making this model available.
+
+- **Icons and Graphics:** Some icons and graphical elements used in the app are attributed to [Flaticon](https://www.flaticon.es/autores/pod-gladiator). We acknowledge and appreciate the contribution of their creators.
+
+Thank you to these platforms and contributors for providing valuable resources that enhance our application.
+
+
+
 ---
 
 By using Lindsey: Skincare Advisor, you acknowledge that you have read, understood, and agree to these Terms of Use and the associated Privacy Policy.
