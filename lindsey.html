@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lindsey - Your Skincare Advisor</title>
   <style>
     :root {
@@ -29,51 +30,7 @@
       background: var(--background-color);
       color: var(--text-color);
       line-height: 1.6;
-    }
-
-    /* Navigation */
-    header {
-      background: var(--accent-color);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 4px var(--shadow-color);
-    }
-
-    .navbar {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-    }
-
-    .navbar .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: var(--primary-color);
-    }
-
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .navbar li {
-      position: relative;
-    }
-
-    .navbar a {
-      text-decoration: none;
-      color: var(--text-color);
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .navbar a:hover {
-      color: var(--primary-color);
+      overflow-x: hidden;
     }
 
     /* Hero Section */
@@ -112,22 +69,19 @@
     }
 
     .hero .cta-button {
-      background: #fff;
-      color: var(--secondary-color);
-      border: none;
-      padding: 1.2rem 2.5rem;
-      font-size: 1.1rem;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-      font-weight: bold;
+      display: inline-block;
+      transition: transform 0.3s;
+      text-decoration: none;
     }
 
     .hero .cta-button:hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 15px rgba(90, 24, 154, 0.3);
-      background-color: #F0E6FF;
-      color: var(--secondary-color);
+    }
+
+    .hero .cta-button img {
+      height: 45px;
+      width: auto;
+      display: block;
     }
 
     /* Main Content */
@@ -192,29 +146,92 @@
     footer p {
       font-size: 1rem;
       color: var(--secondary-color);
+      margin-bottom: 0.5rem;
     }
 
+    footer .legal-links {
+      margin-top: 1rem;
+    }
+
+    footer .legal-links a {
+      color: var(--primary-color);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    footer .legal-links a:hover {
+      color: var(--secondary-color);
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+
+      .hero .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .feature {
+        margin-bottom: 1.5rem;
+      }
+
+      footer .legal-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      footer .legal-links a {
+        margin: 0;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .hero {
+        padding: 3rem 1rem 4rem;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      main {
+        padding: 0 1rem;
+        margin: 2rem auto;
+      }
+
+      .feature h3 {
+        font-size: 1.4rem;
+      }
+
+      .feature p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-
-  <!-- NAVIGATION -->
-  <header>
-    <div class="navbar">
-      <div class="logo">Lindsey</div>
-      <ul>
-        <li><a href="#analysis">Analysis</a></li>
-        <li><a href="#routine">Routine</a></li>
-        <li><a href="#history">History</a></li>
-      </ul>
-    </div>
-  </header>
-
   <!-- HERO SECTION -->
   <section class="hero">
     <h1>Say hi to Lindsey! <span style="font-size:2rem;">👋</span></h1>
     <p>Your skincare companion, designed to make your beauty routine simpler and more effective.</p>
-    <button class="cta-button">Get Started</button>
+    <a href="#" class="cta-button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Download_on_the_App_Store_RGB_blk.svg/1024px-Download_on_the_App_Store_RGB_blk.svg.png" alt="Download on the App Store">
+    </a>
   </section>
 
   <!-- MAIN CONTENT -->
@@ -255,7 +272,10 @@
   <!-- FOOTER -->
   <footer>
     <p>Contact: alexmolinacriado@gmail.com</p>
+    <div class="legal-links">
+      <a href="https://alexmolina08.github.io/lindsey-terms/privacy-policy" target="_blank">Privacy Policy</a>
+      <a href="https://alexmolina08.github.io/lindsey-terms/terms-of-use" target="_blank">Terms of Service</a>
+    </div>
   </footer>
-
 </body>
 </html>
