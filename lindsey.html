@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lindsey - Your Skincare Advisor</title>
+  <style>
+    :root {
+      --primary-color: #9D4EDD; /* Refined purple */
+      --secondary-color: #5A189A; /* Deeper purple */
+      --accent-color: #ffffff; /* White for sections and footer */
+      --text-color: #2B2D42; /* Darker text for better readability */
+      --background-color: #F8F7FF; /* Softer background */
+      --shadow-color: rgba(106, 17, 203, 0.1); /* Subtle purple shadow */
+      --card-hover-color: #F0E6FF; /* Light purple for hover states */
+      --heading-font-size: 2.5rem;
+      --subheading-font-size: 1.2rem;
+      --card-radius: 12px;
+    }
+
+    /* Base Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    header {
+      background: var(--accent-color);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 4px var(--shadow-color);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar li {
+      position: relative;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: var(--primary-color);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: #fff;
+      text-align: center;
+      padding: 5rem 2rem 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 650px;
+      margin: 0.5rem auto 2rem;
+      line-height: 1.8;
+    }
+
+    .hero .cta-button {
+      background: #fff;
+      color: var(--secondary-color);
+      border: none;
+      padding: 1.2rem 2.5rem;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+      font-weight: bold;
+    }
+
+    .hero .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(90, 24, 154, 0.3);
+      background-color: #F0E6FF;
+      color: var(--secondary-color);
+    }
+
+    /* Main Content */
+    main {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature {
+      background: #fff;
+      border-radius: var(--card-radius);
+      box-shadow: 0 3px 10px var(--shadow-color);
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 4px solid var(--primary-color);
+    }
+
+    .feature:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px var(--shadow-color);
+      background-color: var(--card-hover-color);
+    }
+
+    .feature h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+
+    .feature p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--accent-color);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      box-shadow: 0 -2px 4px var(--shadow-color);
+      border-top: 1px solid rgba(157, 78, 221, 0.1);
+    }
+
+    footer p {
+      font-size: 1rem;
+      color: var(--secondary-color);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Lindsey</div>
+      <ul>
+        <li><a href="#analysis">Analysis</a></li>
+        <li><a href="#routine">Routine</a></li>
+        <li><a href="#history">History</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Say hi to Lindsey! <span style="font-size:2rem;">👋</span></h1>
+    <p>Your skincare companion, designed to make your beauty routine simpler and more effective.</p>
+    <button class="cta-button">Get Started</button>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="features">
+      <!-- SKIN ANALYSIS -->
+      <div class="feature" id="analysis">
+        <h3>SKIN ANALYSIS <span style="font-size:1.2rem;">🔎</span></h3>
+        <p>
+          Take a photo and let Lindsey analyze your skin type and overall condition.
+          You'll receive personalized product recommendations and expert skincare tips
+          tailored just for you.
+        </p>
+      </div>
+
+      <!-- SKINCARE ROUTINE -->
+      <div class="feature" id="routine">
+        <h3>SKINCARE ROUTINE <span style="font-size:1.2rem;">💆</span></h3>
+        <p>
+          Lindsey generates a 7-day routine based on your skin analysis. Mark completed
+          tasks in the progress tracker to stay on top of each step. Every step is fully
+          customized to meet your skin's unique needs.
+        </p>
+      </div>
+
+      <!-- ANALYSIS HISTORY -->
+      <div class="feature" id="history">
+        <h3>ANALYSIS HISTORY <span style="font-size:1.2rem;">📈</span></h3>
+        <p>
+          Track your progress over time by viewing past analyses. You can see how your
+          skin changes and evolves. Lindsey securely stores your data on your device,
+          so you stay in full control of your skincare journey.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Contact: alexmolinacriado@gmail.com</p>
+  </footer>
+
+</body>
+</html>
